@@ -1,0 +1,33 @@
+<br>
+<h1>{{ countryDetail[0].name.official }}</h1>
+<img src="{{ countryDetail[0].flags.svg }}" alt="">
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">informations</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Name  {{ countryDetail[0].name.common}}</td>
+      </tr>
+      <tr>
+        <td>Capital  {{ countryDetail[0].capital[0]}}</td>
+      </tr>
+      <tr>
+        <td>Region {{ countryDetail[0].region}} </td>
+      </tr>
+      <tr>
+        <td>population {{ countryDetail[0].population}} </td>
+      </tr>
+      <tr>
+        <td>Area {{ countryDetail[0].area}} </td>
+      </tr>
+      <tr>
+        <td>Languages <ng-container  *ngFor="let langu of Languages" >{{ langu.value}}</ng-container>  </td>
+      </tr>
+    </tbody>
+  </table>
+  <div  *ngFor="let langu of Languages" >{{ langu.value}}</div>

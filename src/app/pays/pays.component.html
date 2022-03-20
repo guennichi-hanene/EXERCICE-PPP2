@@ -1,0 +1,14 @@
+<div class=" row countries-container">
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">Search</span>
+    <input type="text" class="form-control" [(ngModel)]="countryName" >
+  </div>
+      <div class="card col-sm-4" style="width: 18rem;" 
+      *ngFor="let country of countriesByContinent | country:countryName">
+        <img src="{{country.flags.svg}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{country.name.official}}</h5>
+          <a href="#" class="btn btn-primary" routerLink="/pays/details/{{country.name.common}}">plus de détails</a>
+        </div>
+      </div>
+</div>

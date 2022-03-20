@@ -1,0 +1,24 @@
+<div class="spacer">
+    <br>
+</div>
+<table class="table table-sm">
+    <caption>List of continents</caption>
+    <thead>
+        <tr>
+            <th>Continent name</th>
+            <th>countries</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    <tr *ngFor="let cont of continents ; let i = index">
+            <td >
+                {{continents[i]}}
+            </td>
+            <td>
+              <button type="button" class="btn btn-info" routerLink="/pays/{{continents[i]}}">Explore countries</button>
+            </td>
+        </tr>
+     
+    </tbody>
+  </table>
